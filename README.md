@@ -21,7 +21,7 @@ v12.10.0
 ## do first after pulling this repository
 
 you should do this command.  
-this command means you are going to install the package into your working directory.
+this command means you are going to install the packages into your working directory.
 
 ```
 yarn install
