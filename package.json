@@ -14,10 +14,13 @@
     "clean": "rimraf dist/*",
     "build": "yarn clean && yarn compile"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "12.7.11",
+    "@typescript-eslint/eslint-plugin": "2.3.2",
+    "@typescript-eslint/parser": "2.3.2",
+    "@typescript-eslint/typescript-estree": "2.3.2",
+    "eslint": "6.5.1",
     "rimraf": "3.0.0",
     "ts-node": "8.4.1",
     "ts-node-dev": "1.0.0-pre.43",
