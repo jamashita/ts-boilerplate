@@ -3,22 +3,22 @@
 this repository is for typescript beginners.  
 you can start typescript soon with this repository. :))
 
-## requirement
+## Requirement
 
 this repository is assumed to work in such environment as below.
 
  ```
 > node -v
-v12.10.0
+v12.12.0
 
 > npm -v               
-6.10.3
+6.11.3
 
 > yarn -v
-1.19.0
+1.19.1
 ```
 
-## do first after pulling this repository
+## Do first after pulling this repository
 
 you should do this command.  
 this command means you are going to install the packages into your working directory.
@@ -27,7 +27,7 @@ this command means you are going to install the packages into your working direc
 yarn install
 ```
 
-## run
+## Run
 
 there are some reserved `npm-scripts`.  
 here are they.  
