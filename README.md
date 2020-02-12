@@ -9,13 +9,13 @@ this repository is assumed to work in such environment as below.
 
  ```
 > node -v
-v13.3.0
+v13.8.0
 
 > npm -v               
-6.13.1
+6.13.6
 
 > yarn -v
-1.21.1
+1.22.0
 ```
 
 ## Do first after pulling this repository
