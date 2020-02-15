@@ -1,7 +1,7 @@
 {
   "name": "ts-boilerplate",
-  "version": "0.1.3",
-  "main": "src/index.js",
+  "version": "0.1.4",
+  "main": "dist/index.js",
   "repository": "git@github.com:jamashita/ts-boilerplate.git",
   "author": "jamashita <jamashita@arachnid.xyz>",
   "license": "MIT",
