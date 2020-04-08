@@ -76,7 +76,7 @@
     "no-shadow": "error",
     "no-sparse-arrays": "error",
     "no-template-curly-in-string": "error",
-    "no-throw-literal": "error",
+    "no-throw-literal": "off",
     "no-trailing-spaces": "error",
     "no-undef-init": "error",
     "no-unsafe-finally": "error",
@@ -282,7 +282,12 @@
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/require-await": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
-    "@typescript-eslint/restrict-template-expressions": "error",
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        "allowNumber": true
+      }
+    ],
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/semi": "error",
     "@typescript-eslint/space-before-function-paren": [
@@ -311,13 +316,14 @@
     "@typescript-eslint/typedef": [
       "error",
       {
-        "arrayDestructuring": false,
+        "arrayDestructuring": true,
         "arrowParameter": true,
         "memberVariableDeclaration": true,
         "objectDestructuring": false,
         "parameter": true,
         "propertyDeclaration": true,
-        "variableDeclaration": true
+        "variableDeclaration": true,
+        "variableDeclarationIgnoreFunction": true
       }
     ],
     "@typescript-eslint/unbound-method": "off",
