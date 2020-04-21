@@ -5,7 +5,7 @@
   "repository": "git@github.com:jamashita/ts-boilerplate.git",
   "author": "jamashita <jamashita@arachnid.xyz>",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "scripts": {
     "start": "node dist/index.js",
     "compile": "tsc",
@@ -13,17 +13,23 @@
     "watch": "ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist",
     "build": "yarn clean && yarn compile",
-    "lint": "eslint 'src/**/*.ts{,x}' --fix"
+    "lint": "eslint 'src/**/*.ts{,x}' --fix",
+    "update": "ncu -u && yarn install"
+  },
+  "engines": {
+    "node": ">= 13.10.0",
+    "npm": ">= 6.12"
   },
   "dependencies": {},
   "devDependencies": {
-    "@types/node": "13.11.0",
-    "@typescript-eslint/eslint-plugin": "2.27.0",
-    "@typescript-eslint/parser": "2.27.0",
-    "@typescript-eslint/typescript-estree": "2.27.0",
+    "@types/node": "13.13.1",
+    "@typescript-eslint/eslint-plugin": "2.29.0",
+    "@typescript-eslint/parser": "2.29.0",
+    "@typescript-eslint/typescript-estree": "2.29.0",
     "eslint": "6.8.0",
+    "npm-check-updates": "4.1.2",
     "rimraf": "3.0.2",
-    "ts-node": "8.8.1",
+    "ts-node": "8.9.0",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.8.3"
   }
