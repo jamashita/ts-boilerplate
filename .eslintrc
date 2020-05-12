@@ -11,11 +11,12 @@
   ],
   "extends": [
     "eslint:recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended"
   ],
   "env": {
-    "browser": true,
     "es6": true,
     "node": true,
     "es2020": true
@@ -160,18 +161,7 @@
       "never"
     ],
     "@typescript-eslint/generic-type-naming": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1,
-        "VariableDeclarator": {
-          "var": 2,
-          "let": 2,
-          "const": 3
-        }
-      }
-    ],
+    "@typescript-eslint/indent": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/member-delimiter-style": [
       "error",
@@ -278,14 +268,18 @@
     "@typescript-eslint/prefer-regexp-exec": "error",
     "@typescript-eslint/prefer-string-starts-ends-with": "error",
     "@typescript-eslint/promise-function-async": "off",
-    "@typescript-eslint/quotes": ["error", "single"],
+    "@typescript-eslint/quotes": [
+      "error",
+      "single"
+    ],
     "@typescript-eslint/require-array-sort-compare": "error",
     "@typescript-eslint/require-await": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
     "@typescript-eslint/restrict-template-expressions": [
       "error",
       {
-        "allowNumber": true
+        "allowNumber": true,
+        "allowBoolean": true
       }
     ],
     "@typescript-eslint/return-await": "error",
@@ -327,6 +321,7 @@
       }
     ],
     "@typescript-eslint/unbound-method": "off",
-    "@typescript-eslint/unified-signatures": "error"
+    "@typescript-eslint/unified-signatures": "error",
+    "prettier/prettier": "error"
   }
 }
