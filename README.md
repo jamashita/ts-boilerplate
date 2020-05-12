@@ -7,11 +7,11 @@ you can start typescript soon with this repository. :))
 
 this repository is assumed to work in such environment as below.
 
- ```
+```
 > node -v
-v13.13.0
+v14.0.0
 
-> npm -v 
+> npm -v
 6.14.4
 
 > yarn -v
