@@ -48,7 +48,6 @@
     "no-caller": "error",
     "no-case-declarations": "error",
     "no-cond-assign": "error",
-    "no-console": "error",
     "no-debugger": "error",
     "no-duplicate-case": "error",
     "no-empty": "error",
