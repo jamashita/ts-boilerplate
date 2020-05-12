@@ -2,7 +2,10 @@
   "name": "ts-boilerplate",
   "version": "0.2.1",
   "main": "dist/index.js",
-  "repository": "git@github.com:jamashita/ts-boilerplate.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jamashita/ts-boilerplate.git"
+  },
   "author": "jamashita <jamashita@arachnid.xyz>",
   "license": "MIT",
   "private": true,
@@ -13,13 +16,15 @@
     "watch": "ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist",
     "build": "yarn clean && yarn compile",
-    "lint": "eslint 'src/**/*.ts{,x}' --fix",
-    "update": "ncu -u && yarn install"
+    "lint": "eslint --fix 'src/**/*.ts'",
+    "format": "prettier --write src/**/*.ts",
+    "update": "ncu -u && yarn install && yarn upgrade"
   },
   "engines": {
-    "node": ">= 13.13.0",
-    "npm": ">= 6.14.4"
+    "node": ">= 14.0.0",
+    "npm": ">= 6.14"
   },
+  "engineStrict": true,
   "dependencies": {},
   "devDependencies": {
     "@types/node": "13.13.5",
