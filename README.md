@@ -9,10 +9,10 @@ this repository is assumed to work in such environment as below.
 
 ```
 > node -v
-v14.0.0
+v14.5.0
 
 > npm -v
-6.14.4
+6.14.5
 
 > yarn -v
 1.22.4
@@ -20,8 +20,8 @@ v14.0.0
 
 ## Do first after pulling this repository
 
-you should do this command.  
-this command means you are going to install the packages into your working directory.
+you should run this command at first.  
+this command means you are going to install the required packages into your working directory.
 
 ```
 yarn install
@@ -30,37 +30,46 @@ yarn install
 ## Run
 
 there are some reserved `npm-scripts`.  
-here are they.  
 `npm-scripts` is in the `script` section in `package.json`
 
+```json
+  "scripts": {
+    "build": "yarn clean && yarn compile",
+    "clean": "rimraf dist",
+    "compile": "tsc",
+    "dev": "ts-node src/index.ts",
+    "format": "eslint --fix 'src/**/*.ts'",
+    "start": "node dist/index.js",
+    "update": "ncu -u && yarn install && yarn upgrade",
+    "watch": "ts-node-dev --respawn src/index.ts"
+  },
 ```
-yarn start
-```
-start js program. the entrypoint is `dist/index.js`  
+
+### npm commands
+
+#### `yarn start`
+
+start js program. the entrypoint is `dist/index.js` .  
 you have to `translate` `ts` files into `js` files at first.  
 (this `translation` is called `transpile` .)
 
-```
-yarn compile
-```
+#### `yarn compile`
+
 transpile `src/*.ts` files into `dist/*.js` files.
  
-```
-yarn dev
-```
+### `yarn dev`
+
 start `ts` program without transpiling. the entrypoint is `src/index.ts` .
 
-```
-yarn watch
-``` 
-start `ts` program without transpiling. once the `src/*.ts` codes are changed, the running program will immediately automatically restart.
+#### `yarn watch`
 
-```
-yarn clean
-```
+start `ts` program without transpiling.  
+once the `src/*.ts` codes are changed, the running program will immediately automatically restart.
+
+#### `yarn clean`
+
 remove `dist/*.js` files.
 
-```
-yarn build
-```
+#### `yarn build`
+
 automatically remove `dist/*.js` and transpile `src/*.ts` .
