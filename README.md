@@ -49,7 +49,7 @@ there are some reserved `npm-scripts`.
 
 #### `yarn start`
 
-start js program. the entrypoint is `dist/index.js` .  
+start js program. the entry point is `dist/index.js` .  
 you have to `translate` `ts` files into `js` files at first.  
 (this `translation` is called `transpile` .)
 
@@ -59,7 +59,7 @@ transpile `src/*.ts` files into `dist/*.js` files.
  
 ### `yarn dev`
 
-start `ts` program without transpiling. the entrypoint is `src/index.ts` .
+start `ts` program without transpiling. the entry point is `src/index.ts` .
 
 #### `yarn watch`
 
