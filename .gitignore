@@ -180,7 +180,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # bolerplate
-.idea/
 .vscode/
 dist/
 
