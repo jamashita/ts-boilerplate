@@ -11,7 +11,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
   ],
   "env": {
     "es6": true,
@@ -103,7 +103,7 @@
     "max-params": "off",
     "max-statements": "off",
     "max-statements-per-line": "off",
-    "multiline-comment-style": "error",
+    "multiline-comment-style": "off",
     "multiline-ternary": "error",
     "new-cap": "off",
     "new-parens": "error",
@@ -118,7 +118,7 @@
     "no-caller": "error",
     "no-catch-shadow": "error",
     "no-confusing-arrow": "error",
-    "no-console": "off",
+    "no-console": "error",
     "no-constructor-return": "error",
     "no-continue": "off",
     "no-div-regex": "error",
@@ -177,6 +177,7 @@
     "no-process-exit": "error",
     "no-promise-executor-return": "error",
     "no-proto": "error",
+    "no-redeclare": "error",
     "no-restricted-exports": "error",
     "no-restricted-globals": "error",
     "no-restricted-imports": "error",
@@ -189,7 +190,7 @@
     "no-self-compare": "error",
     "no-sequences": "error",
     "no-setter-return": "error",
-    "no-shadow": "error",
+    "no-shadow": "off",
     "no-spaced-func": "error",
     "no-sync": "error",
     "no-tabs": "error",
@@ -326,6 +327,12 @@
       }
     ],
     "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "no-type-imports"
+      }
+    ],
     "@typescript-eslint/default-param-last": "off",
     "@typescript-eslint/dot-notation": "error",
     "@typescript-eslint/explicit-function-return-type": [
@@ -364,10 +371,12 @@
       "error",
       {
         "multiline": {
-          "delimiter": "semi"
+          "delimiter": "semi",
+          "requireLast": true
         },
         "singleline": {
-          "delimiter": "semi"
+          "delimiter": "semi",
+          "requireLast": true
         }
       }
     ],
@@ -465,6 +474,7 @@
     "@typescript-eslint/no-extra-semi": "error",
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/no-for-in-array": "error",
+    "@typescript-eslint/no-implicit-any-catch": "error",
     "@typescript-eslint/no-implied-eval": "error",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-invalid-this": "error",
@@ -489,6 +499,13 @@
     "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
     "@typescript-eslint/no-non-null-assertion": "error",
     "@typescript-eslint/no-parameter-properties": "error",
+    "@typescript-eslint/no-redeclare": [
+      "error",
+      {
+        "ignoreDeclarationMerge": true
+      }
+    ],
+    "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-require-imports": "error",
     "@typescript-eslint/no-this-alias": [
       "error",
@@ -516,11 +533,11 @@
         "ignoreRestSiblings": true
       }
     ],
-    "@typescript-eslint/no-unused-vars-experimental": "off",
     "@typescript-eslint/no-use-before-define": "error",
     "@typescript-eslint/no-useless-constructor": "error",
     "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-as-const": "error",
+    "@typescript-eslint/prefer-enum-initializers": "error",
     "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-function-type": "off",
     "@typescript-eslint/prefer-includes": "error",
